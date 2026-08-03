@@ -5,7 +5,7 @@ import { toast } from "sonner";
 import { Toaster } from "sonner";
 import { ArrowRight, Check, Mail, Phone } from "lucide-react";
 
-import heroAsset from "@/assets/smart-2-hero.jpg.asset.json";
+import heroImage from "@/assets/smart-2-hero.jpg";
 import { submitInteressent } from "@/lib/submit-interessent";
 
 export const Route = createFileRoute("/")({
@@ -24,9 +24,7 @@ export const Route = createFileRoute("/")({
           "Bereit für eine neue Generation? Jetzt entdecken und in die #2 Interessentenliste eintragen.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: heroAsset.url },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: heroAsset.url },
     ],
   }),
   component: Index,
@@ -130,7 +128,7 @@ function Index() {
             <div className="absolute inset-0 -z-10 rounded-[2rem] bg-gradient-to-br from-accent/20 via-transparent to-transparent blur-3xl" />
             <div className="overflow-hidden rounded-[2rem] border border-border shadow-[var(--shadow-soft)]">
               <img
-                src="/public/smart-2-hero.jpg"
+                src={heroImage}
                 alt="Der neue smart #2 – Frontpartie in Weiß"
                 className="h-full w-full object-cover"
                 loading="eager"

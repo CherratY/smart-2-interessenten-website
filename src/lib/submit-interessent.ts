@@ -11,7 +11,7 @@ export type Interessent = z.infer<typeof interessentSchema>;
 
 /**
  * Sendet den Eintrag direkt an dein eigenes Google Apps Script Web App.
- * Keine Lovable-Dienste, keine Datenbank, kein Server-Key noetig.
+ * Keine Datenbank, kein Server-Key noetig.
  * URL wird als VITE_SHEETS_WEBHOOK_URL gesetzt (Vercel > Environment Variables).
  */
 export async function submitInteressent(data: Interessent) {
