@@ -4,10 +4,9 @@ import { z } from "zod";
 import { toast } from "sonner";
 import { Toaster } from "sonner";
 import { ArrowRight, Check, Mail, Phone } from "lucide-react";
-import { useServerFn } from "@tanstack/react-start";
 
 import heroAsset from "@/assets/smart-2-hero.jpg.asset.json";
-import { submitInteressent } from "@/lib/submit-interessent.functions";
+import { submitInteressent } from "@/lib/submit-interessent";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -52,7 +51,6 @@ function Index() {
   const [form, setForm] = useState<FormState>(initial);
   const [submitting, setSubmitting] = useState(false);
   const [done, setDone] = useState(false);
-  const submit = useServerFn(submitInteressent);
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -63,7 +61,7 @@ function Index() {
     }
     setSubmitting(true);
     try {
-      await submit({ data: parsed.data });
+      await submitInteressent(parsed.data);
       setDone(true);
       setForm(initial);
     } catch {

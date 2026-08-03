@@ -31,9 +31,9 @@ dist-ssr
 *.sln
 *.sw?
 
-# Ignored
+.env
 .workspace
 .lovable
-.env
+tsconfig.tsbuildinfo
 node_modules
 dist
