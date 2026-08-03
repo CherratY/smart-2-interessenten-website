@@ -130,7 +130,7 @@ function Index() {
             <div className="absolute inset-0 -z-10 rounded-[2rem] bg-gradient-to-br from-accent/20 via-transparent to-transparent blur-3xl" />
             <div className="overflow-hidden rounded-[2rem] border border-border shadow-[var(--shadow-soft)]">
               <img
-                src={heroAsset.url}
+                src="/public/smart-2-hero.jpg"
                 alt="Der neue smart #2 – Frontpartie in Weiß"
                 className="h-full w-full object-cover"
                 loading="eager"
