@@ -31,9 +31,6 @@ dist-ssr
 *.sln
 *.sw?
 
-.env
-.workspace
-.lovable
 tsconfig.tsbuildinfo
 node_modules
 dist
